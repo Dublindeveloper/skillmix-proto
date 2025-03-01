@@ -4,46 +4,45 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    width: 360px;
+    height: 100%;
+    margin: 0 auto;
     font-family: Arial, sans-serif;
-    padding: 10px;
-    width: 100%;
-    min-height: 100vh;
     background: #f5f5f5;
     color: #333;
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    overflow-x: hidden;
 }
 
 .container {
-    width: 100%;
-    max-width: 600px; /* Limits width on larger screens */
+    width: 360px;
+    padding: 15px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 24px;
     color: #2c3e50;
     text-align: center;
     margin-bottom: 15px;
 }
 
 h2 {
-    font-size: 1.1rem;
+    font-size: 18px;
     color: #34495e;
     margin: 15px 0 10px;
 }
 
 p {
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 14px;
 }
 
 ul {
     list-style: none;
-    padding: 0;
-    width: 100%;
 }
 
 li {
@@ -52,10 +51,8 @@ li {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-size: 0.9rem;
+    font-size: 14px;
+    line-height: 1.4;
 }
 
 .form-box {
@@ -64,7 +61,6 @@ li {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin-bottom: 15px;
-    width: 100%;
 }
 
 input, select {
@@ -73,11 +69,7 @@ input, select {
     border-radius: 5px;
     width: 100%;
     margin-bottom: 10px;
-    font-size: 0.9rem;
-}
-
-.shift-type {
-    background: #ecf0f1;
+    font-size: 14px;
 }
 
 .button {
@@ -87,11 +79,11 @@ input, select {
     text-decoration: none;
     border-radius: 20px;
     box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 14px;
     display: block;
     width: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .button:hover {
@@ -101,93 +93,25 @@ input, select {
 
 .button.back {
     background: #7f8c8d;
-    margin-top: 15px;
+    margin-top: auto; /* Pushes to bottom */
 }
 
 .button-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
-    width: 100%;
-}
-
-.button-grid .button {
-    width: 100%;
-}
-
-table {
-    width: 100%;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    font-size: 0.8rem;
-    overflow-x: auto;
-    display: block;
-    white-space: nowrap;
-}
-
-th, td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    font-size: 0.8rem;
-}
-
-th {
-    background: #2c3e50;
-    color: white;
-}
-
-tr:last-child td {
-    font-weight: bold;
+    flex-grow: 1; /* Stretches to fill space */
 }
 
 .graph {
     margin: 15px 0;
-    width: 100%;
 }
 
 .bar {
-    padding: 8px;
+    padding: 10px;
     margin: 5px 0;
     color: white;
     border-radius: 5px;
-    font-size: 0.8rem;
-    width: 100%;
-}
-
-/* Bar heights for DoN graph */
-.bar:nth-child(1) { height: 50px; background: #e74c3c; }
-.bar:nth-child(2) { height: 40px; background: #f1c40f; }
-.bar:nth-child(3) { height: 30px; background: #2ecc71; }
-.bar:nth-child(4) { height: 20px; background: #3498db; }
-
-/* Mobile Adjustments */
-@media (max-width: 600px) {
-    body { padding: 5px; }
-
-    h1 { font-size: 1.2rem; }
-    h2 { font-size: 1rem; }
-
-    .container {
-        width: 95%;
-    }
-
-    .button-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .button {
-        font-size: 0.8rem;
-        padding: 10px;
-    }
-
-    table {
-        font-size: 0.7rem;
-        overflow-x: auto;
-    }
-
-    th, td {
-        padding: 6px;
-    }
+    font-size: 14px;
+    height: 40px; /* Fixed height for consistency */
 }

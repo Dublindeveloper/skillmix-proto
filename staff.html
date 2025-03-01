@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SkillMix - Staff</title>
+    <title>SkillMix - Welcome</title>
+    <meta name="viewport" content="width=360, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
 </head>
-<body onload="loadShift()">
-    <h1>Welcome, Mary (Renal)</h1>
-    <h2>Your Shifts</h2>
-    <ul>
-        <li>Mar 2, LD - Mary Ward</li>
-        <li>Mar 3, AM - Mary Ward</li>
-    </ul>
-    <h2>Available Overtime</h2>
-    <ul id="overtime-list">
-        <li>Mar 3, Night - Mary Ward <a href="confirmed.html" class="button">Accept</a></li>
-        <li>Mar 4, AM - Peters Ward <a href="confirmed.html" class="button">Accept</a></li>
-        <!-- Dynamic shift will append here -->
-    </ul>
-    <h2>Profile</h2>
-    <p>Ward: Mary<br>Directorate: Renal<br>Manager: Jane (CNM2)</p>
-    <a href="index.html" class="button back">Back to Home</a>
+<body>
+    <div class="container">
+        <h1>Welcome to SkillMix</h1>
+        <p>Select a role:</p>
+        <div class="button-grid">
+            <a href="staff.html" class="button">Staff Nurse</a>
+            <a href="cnm2.html" class="button">CNM2</a>
+            <a href="cnm3.html" class="button">CNM3</a>
+            <a href="dnm.html" class="button">DNM</a>
+            <a href="don.html" class="button">DoN</a>
+        </div>
+    </div>
 </body>
 </html>
