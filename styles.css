@@ -1,147 +1,160 @@
-body {
-    font-family: Arial, sans-serif;
-    padding: 5vw; /* Scales with viewport width */
-    max-width: 100%; /* Full width on small screens */
-    margin: 0 auto;
-    background: #f5f5f5;
-    color: #333;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    width: 100%;
+    min-height: 100vh;
+    background: #f5f5f5;
+    color: #333;
+    font-size: 16px; /* Base size for scaling */
+}
+
 h1 {
-    font-size: clamp(18px, 6vw, 24px); /* Min 18px, max 24px, scales with viewport */
+    font-size: 1.5rem; /* 24px on avg phone */
     color: #2c3e50;
     text-align: center;
-    margin-bottom: 4vw;
+    margin-bottom: 15px;
 }
+
 h2 {
-    font-size: clamp(14px, 4vw, 18px);
+    font-size: 1.1rem; /* ~18px */
     color: #34495e;
-    margin-top: 4vw;
+    margin: 15px 0 10px;
 }
-p { 
+
+p {
     text-align: center;
-    font-size: clamp(12px, 3.5vw, 16px);
+    font-size: 0.9rem; /* ~14px */
 }
+
 ul {
     list-style: none;
-    padding: 0;
 }
+
 li {
-    margin: 2vw 0;
-    padding: 3vw;
+    margin: 10px 0;
+    padding: 10px;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     display: flex;
-    flex-wrap: wrap; /* Wraps content on small screens */
-    justify-content: space-between;
-    align-items: center;
-    gap: 2vw;
+    flex-direction: column; /* Stack on mobile */
+    gap: 10px;
+    font-size: 0.9rem;
 }
+
 .form-box {
     background: #fff;
-    padding: 3vw;
+    padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-bottom: 4vw;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
 }
+
 input, select {
-    padding: 2vw;
+    padding: 8px;
     border: 1px solid #ddd;
     border-radius: 5px;
     width: 100%;
-    margin-bottom: 2vw;
-    box-sizing: border-box;
-    font-size: clamp(12px, 3.5vw, 16px);
+    margin-bottom: 10px;
+    font-size: 0.9rem;
 }
-.shift-type { background: #ecf0f1; }
+
+.shift-type {
+    background: #ecf0f1;
+}
+
 .button {
-    display: inline-block;
-    padding: 2.5vw 5vw;
+    padding: 10px;
     background: #3498db;
     color: white;
     text-decoration: none;
-    border-radius: 25px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
     transition: transform 0.2s, box-shadow 0.2s;
     text-align: center;
-    font-size: clamp(12px, 3.5vw, 16px);
+    font-size: 0.9rem;
+    display: block; /* Full-width buttons */
+    width: 100%;
 }
+
 .button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.3);
 }
+
 .button.back {
     background: #7f8c8d;
-    margin-top: 4vw;
-    display: block;
+    margin-top: 15px;
     animation: none;
 }
+
 .button-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2vw;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 10px;
+    width: 100%;
 }
+
 .button-grid .button {
-    flex: 1 1 45%;
-    max-width: 45%;
-    min-width: 100px; /* Ensures buttons don’t shrink too much */
+    width: 100%; /* Fill grid cell */
 }
+
 table {
     width: 100%;
-    border-collapse: collapse;
     background: #fff;
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    font-size: clamp(10px, 3vw, 14px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 0.8rem; /* Smaller for mobile */
 }
+
 th, td {
-    padding: 2vw;
+    padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-    word-wrap: break-word; /* Prevents overflow */
+    font-size: 0.8rem;
 }
+
 th {
     background: #2c3e50;
     color: white;
 }
+
 tr:last-child td {
     font-weight: bold;
 }
+
 .graph {
-    margin: 4vw 0;
+    margin: 15px 0;
 }
+
 .bar {
-    padding: 2vw;
-    margin: 1vw 0;
+    padding: 8px;
+    margin: 5px 0;
     color: white;
     border-radius: 5px;
-    text-align: left;
-    font-size: clamp(10px, 3vw, 14px);
-    max-width: 100%;
+    font-size: 0.8rem;
+    width: 100%; /* Full width, scale height */
 }
 
-/* Specific bar widths for DoN graph */
-.bar:nth-child(1) { width: 50%; background: #e74c3c; } /* Surgical */
-.bar:nth-child(2) { width: 40%; background: #f1c40f; } /* Medical */
-.bar:nth-child(3) { width: 30%; background: #2ecc71; } /* Renal */
-.bar:nth-child(4) { width: 20%; background: #3498db; } /* Neuro */
+/* Bar heights instead of widths */
+.bar:nth-child(1) { height: 50px; background: #e74c3c; } /* Surgical */
+.bar:nth-child(2) { height: 40px; background: #f1c40f; } /* Medical */
+.bar:nth-child(3) { height: 30px; background: #2ecc71; } /* Renal */
+.bar:nth-child(4) { height: 20px; background: #3498db; } /* Neuro */
 
-/* Media Queries for Extra Small Screens */
-@media (max-width: 320px) {
-    .button-grid .button { 
-        flex: 1 1 100%; 
-        max-width: 100%; 
-    }
-    li { 
-        flex-direction: column; 
-        text-align: center; 
-    }
-    .button { 
-        margin-top: 2vw; 
-    }
+/* Mobile Adjustments */
+@media (max-width: 400px) {
+    body { padding: 5px; }
+    h1 { font-size: 1.2rem; }
+    h2 { font-size: 1rem; }
+    .button-grid { grid-template-columns: 1fr; } /* Stack buttons */
+    th, td { padding: 6px; font-size: 0.7rem; }
 }
 
 @keyframes pulse {
