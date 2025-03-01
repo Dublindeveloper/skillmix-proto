@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SkillMix - CNM2</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body onload="setupForm()">
+    <h1>CNM2 - Mary Ward</h1>
+    <h2>Push a Shift</h2>
+    <div class="form-box">
+        <input type="date" id="shift-date" placeholder="Date">
+        <select id="shift-type" class="shift-type">
+            <option>LD</option><option>ELD</option><option>Night</option><option>AM</option><option>PM</option>
+        </select>
+        <input type="text" value="Mary Ward" readonly>
+        <a href="#" id="push-shift" class="button">Push Shift</a>
+    </div>
+    <h2>Overtime Data</h2>
+    <table>
+        <tr><th>Date</th><th>Shift</th><th>Staff</th><th>Open</th></tr>
+        <tr><td>Mar 1</td><td>Night</td><td>1</td><td>0</td></tr>
+        <tr><td>Mar 2</td><td>AM</td><td>1</td><td>1</td></tr>
+    </table>
+    <a href="index.html" class="button back">Back to Home</a>
+</body>
+</html>

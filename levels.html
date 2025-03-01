@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SkillMix - View Levels</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>SkillMix View Levels</h1>
+    
+    <h2>Staff Nurse</h2>
+    <p>See and accept shifts in your ward.</p>
+    <ul>
+        <li>Mar 3, 7 PM - Phoenix Ward <a href="#" class="button">Accept</a></li>
+    </ul>
+
+    <h2>CNM2 (Ward)</h2>
+    <p>Manage one ward, e.g., Phoenix.</p>
+    <div class="form-box">
+        <input type="date" placeholder="Date">
+        <select class="shift-type">
+            <option>LD</option><option>ELD</option><option>Night</option><option>AM</option><option>PM</option>
+        </select>
+        <input type="text" value="Phoenix" readonly>
+        <a href="#" class="button">Push Shift</a>
+    </div>
+
+    <h2>CNM3 (Multi-Ward)</h2>
+    <p>Oversee 4 wards in Surgical.</p>
+    <table>
+        <tr><th>Ward</th><th>Shifts</th></tr>
+        <tr><td>Phoenix</td><td>2</td></tr>
+        <tr><td>Hardwicke</td><td>1</td></tr>
+    </table>
+
+    <h2>DNM (Directorate)</h2>
+    <p>Manage Surgical Directorate.</p>
+    <table>
+        <tr><th>Ward</th><th>Shifts</th></tr>
+        <tr><td>Phoenix</td><td>2</td></tr>
+        <tr><td>Total</td><td>5</td></tr>
+    </table>
+
+    <h2>DoN (Hospital)</h2>
+    <p>See all directorates.</p>
+    <table>
+        <tr><th>Directorate</th><th>Shifts</th></tr>
+        <tr><td>Surgical</td><td>5</td></tr>
+        <tr><td>Renal</td><td>3</td></tr>
+    </table>
+</body>
+</html>
